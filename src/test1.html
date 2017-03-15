@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>算术运算符</title>
+    <script>
+        function f1() {
+            var a = 5;
+            var b = 5
+            document.write("a++:" + a++);
+            document.write("<br>");
+            document.write("++b:" + (++b));
+            document.write("<br>");
+            document.write(1 == "1");
+            document.write("<br>");
+            document.write(1 === "1");
+        }
+        f1();
+        var day = new Date().getDay();
+        var today;
+        switch (day) {
+            case 0:
+                today = "星期天";
+                break;
+            case 1:
+                today="星期一";
+                break;
+            case 2:
+                today="星期二";
+                break;
+            case 3:
+                today="星期三";
+                break;
+            case 4:
+                today="星期四";
+                break;
+            case 5:
+                today="星期五";
+                break;
+            case 6:
+                today="星期六";
+                break;
+        }
+document.write(today);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
