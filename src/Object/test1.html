@@ -23,10 +23,16 @@
             document.write("<br>");
 
         }
-        var a = new Number("123abc");
+        var a = new Number("123");
         p('通过非数字字符创234abc创建出来的Number对象，a的值是：' + a);
-        p('但是，a==Number。NaN会返回：'+(a==Number.NaN));
-        p('正确半段是否是NaN的方式是调用isNaN函数：'+isNaN(a));
+        p('但是，a==Number。NaN会返回：' + (a == Number.NaN));
+        p('正确半段是否是NaN的方式是调用isNaN函数：' + isNaN(a));
+
+        var b = new Number("123");
+        var c = new Number(3.1415926);
+        p('数字对象123通过tofixed（2）保留两位小数'+c.toFixed(2));
+p('PI通过toFixed(3)保留三位小数：'+c.toFixed(3));//保留三位小数
+
 
     </script>
 </head>
