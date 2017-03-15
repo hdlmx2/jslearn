@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <title>循环 </title>
     <script>
-        function p(s){
-           document.write(s);
-           document.write("<br>");
+        function p(s) {
+            document.write(s);
+            document.write("<br>");
         }
 
-        for(var i=0;i<5;i++){
+        for (var i = 0; i < 5; i++) {
+            p(i);
+        }
+        var j = 0;
+        while (j < 5) {
+            document.write(j);
+            document.write("<br>");
+            j++;
+        }
+        for (var i = 0; i < 5; i++) {
+            if (i == 3)continue;
+            p(i);
+        }
+        for (var i = 0; i < 5; i++) {
+            if (i == 3)break;
             p(i);
         }
     </script>
