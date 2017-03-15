@@ -9,13 +9,39 @@
         if (1 == power || 0 == power) {
             return 1;
         }
-        var result;
+        var result = base;
         for (var i = 0; i < power - 1; i++) {
             result *= base;
         }
-        function calc() {
 
+    }
+    function fuli(rate, year) {
+        var result = 0;
+        for (var i = year; i > 0; i--) {
+            result += p(rate, i);
         }
+        return result;
+    }
+    function calc() {
+        var initMoney = getIntValue("initMoeny");
+        var rate = getIntValue("rate");
+        var year = getIntValue("year");
+        var each = getIntValue("each");
+        var sum1 = (year - 1) * each + initMoney;
+        var sum3 = each * fuli((1 + rate / 100), (year - 1) + initMoney * p((1 + rate / 100), year));
+        var sum2 = sum3 - sum1;
+        setValue("sum1", sum1);
+        setValue("sum2", sum2);
+        setValue("sum3", sum3);
+    }
+
+    function setValue(id, value) {
+        document.getElementById(id).value = value;
+    }
+
+    function getIntValue(id) {
+        return parseInt(document.getElementById(id).value);
+    }
 
     }
 </script>
@@ -53,7 +79,7 @@
         <td><input type="text" id="each" value="0">￥</td>
     </tr>
     <tr>
-        <td colspan="2" align="center"><input type="button" value="计算"></td>
+        <td colspan="2" align="center"><input type="button" value="计算" onclick="calc()"></td>
     </tr>
     <tr>
         <td>本金和</td>
