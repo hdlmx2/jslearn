@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学习异常处理</title>
+</head>
+<script>
+    document.write("试图调用不存在的函数f2()就会报错，并且导致javascript中止执行，后面的代码也不会执行了");
+    function f1() {
+
+    }
+    try{
+        f2();
+    }//调用了不存在的函数
+    catch (err){
+        document.write("捕捉到了异常：");
+        document.write(err.message);
+    }
+    document.write("剩下的代码");
+</script>
+<body>
+
+</body>
+</html>
