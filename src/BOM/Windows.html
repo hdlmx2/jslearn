@@ -35,9 +35,17 @@
         document.write(screen.availWidth + "*" + screen.availHeight)
         document.write("<br />")
 
+        function goback() {
+            history.go(-2);
+        }
+        function del() {
+            var d = confirm("是否要删除?");
+            alert(typeof d + " " + d);
+        }
     </script>
 </head>
 <body>
-
+<button onclick="goback()">返回</button>
+<button onclick="del()">删除</button>
 </body>
 </html>
