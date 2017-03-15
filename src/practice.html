@@ -4,7 +4,52 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<style>
+    table{
+        border-collapse:collapse;
+    }
+    td{
+        border:1px silver solid;
+        padding: 5px;
+        font-size:12px;
+    }
+    input{
+        width:180px;
+    }
+</style>
 <body>
-
+<table>
+    <tr>
+        <td>起始资金</td>
+        <td><input type="text" id="initMoney" value="0">￥</td>
+    </tr>
+    <tr>
+        <td>每年收益</td>
+        <td><input type="text" id="rate" value="0">%</td>
+    </tr>
+    <tr>
+        <td>复利年数</td>
+        <td><input type="text" id="year" value="1">年</td>
+    </tr>
+    <tr>
+        <td>每年追加资金</td>
+        <td><input type="text" id="each" value="0">￥</td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center"><input type="button" value="计算"></td>
+    </tr>
+    <tr>
+        <td>本金和</td>
+        <td><input type="text" id="sum1" disabled="disabled" value="0">￥</td>
+    </tr>
+    <tr>
+        <td>利息和</td>
+        <td><input type="text" id="sum2" disabled="disabled" value="0">￥</td>
+    </tr>
+    <tr>
+        <td>本息和</td>
+        <td><input type="text" id="sum3" disabled="disabled" value="0">￥</td>
+    </tr>
+</table>
 </body>
 </html>
