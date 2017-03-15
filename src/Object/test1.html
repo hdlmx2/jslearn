@@ -3,6 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script>
+        var x = new Number(123);
+        document.write("数字对象X的值：" + x);
+        document.write("<br>");
+        document.write("数字对象X的类型：" + typeof x);
+        document.write("<br>");
+        var y = 123;
+        document.write("基本数据类型y的值：" + y);
+        document.write("<br>");
+        document.write("基本数据类型y的类型：" + typeof y);
+        document.write("<br>");
+        document.write("Numbwe对象的最小值：" + Number.MIN_VALUE);
+        document.write("<br>");
+        document.write("Numbwe对象的最大值：" + Number.MAX_VALUE);
+
+        function p(s) {
+            document.write(s);
+            document.write("<br>");
+
+        }
+        var a = new Number("123abc");
+        p('通过非数字字符创234abc创建出来的Number对象，a的值是：' + a);
+        p('但是，a==Number。NaN会返回：'+(a==Number.NaN));
+        p('正确半段是否是NaN的方式是调用isNaN函数：'+isNaN(a));
+
+    </script>
 </head>
 <body>
 
