@@ -120,14 +120,39 @@
     $("body>div").css(
         "background", "#bbffaa")
 </script>-->
-<script>
+<!--<script>
     $(".one").next("div").css(
         "background", "#bbffaa")
+</script>-->
+<!--<script>
+    $("div:not(.one)").css(
+        "background", "#bbffaa")
+</script>-->
+<!--<script>
+    $("div:lt(3)").css(
+        "background", "#bbffaa")
+</script>-->
+<!--<script>
+    $(":header").css(
+        "background", "#bbffaa")
+</script>-->
+<script>
+    $(":animated").css(
+        "background", "#bbffaa")
 </script>
-<!--<script>-->
-    <!--$("#twodiv").css(-->
-        <!--"background", "#bbffaa")-->
-<!--</script>-->
+<script>
+    $("div[id][title*=e]").css("background", "#bbffaa")
+</script>
 
+
+<button id="bu">点击一下我</button>
+<!--<script>
+    $("#bu").click(function () {
+
+        $("div:hidden").show(500)
+/*        $("div:hidden").hide(2000);*/
+    })
+
+</script>-->
 </body>
 </html>
