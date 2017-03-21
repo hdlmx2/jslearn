@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../resource/jquery.min.js"></script>
+    <script>
+        /*  $("#one").css(
+         "background", "#bbffaa")
+         )*/
+        /*    $(function () {
+         $("#one").css("background", "#bbffaa");
+         })*/
+        $(function () {
+            $("#b1").click(function () {
+                $("#d").hide();
+            });
+            $("#b2").click(function () {
+                $("#d").show();
+            });
+        });
+        $(function () {
+            $("#b1").click(function () {
+                alert($("#input1").val())
+
+            })
+
+        });
+    </script>
+    <style type="text/css">
+        div, span, p {
+            width: 140px;
+            height: 140px;
+            margin: 5px;
+            background: #aaa;
+            border: #000 1px solid;
+            float: left;
+            font-size: 17px;
+            font-family: Verdana;
+        }
+
+        div.mini {
+            width: 55px;
+            height: 55px;
+            background-color: #aaaaaa;
+            font-size: 12px;
+        }
+
+        div.hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="one" id="one">
+    id为one，class为one的div
+    <div class="mini">class为mini的</div>
+</div>
+<div class="one" id="two" title="test">
+    id 为two，class为one，title为test的div。
+    <div class="mini" title="other">class 为mini，title为other</div>
+    <div class="mini" title="test">class 为mini，title为test</div>
+</div>
+<div class="one">
+    <div class="mini">class 为mini</div>
+    <div class="mini">class 为mini</div>
+    <div class="mini">class 为mini</div>
+    <div class="mini"></div>
+</div>
+<div class="one">
+    <div class="mini">class 为mini</div>
+    <div class="mini">class 为mini</div>
+    <div class="mini">class 为mini</div>
+    <div class="mini" title="test">class 为mini，title为test</div>
+</div>
+<div style="display:none" class="none">
+    sytle的display为none的div
+</div>
+<div class="hide">
+    class为hide的div
+</div>
+<div>
+    包含input的type为：hidden的div<input type="hidden" size="8"/>
+</div>
+<span id="mover">正在执行动画的span元素</span>
+<!--
+<button id="b1">隐藏div</button>
+
+<button id="b2">显示div</button>
+-->
+
+<br>
+<br>
+<!--<script>
+    $("#one").css(
+        "background", "#bbffaa")
+</script><script>
+    $(".mini").css(
+        "background", "#bbffaa")
+</script>
+
+<script>
+    $("div").css(
+        "background", "#bbffaa")
+</script>
+<script>
+    $("*").css(
+        "background", "#bbffaa")
+</script>-->
+<!--<script>
+    $("span,#two").css(
+        "background", "#bbffaa")
+</script>-->
+<!--<script>
+    $("body div").css(
+        "background", "#bbffaa")
+</script>-->
+<!--<script>
+    $("body>div").css(
+        "background", "#bbffaa")
+</script>-->
+<script>
+    $(".one").next("div").css(
+        "background", "#bbffaa")
+</script>
+<!--<script>-->
+    <!--$("#twodiv").css(-->
+        <!--"background", "#bbffaa")-->
+<!--</script>-->
+
+</body>
+</html>

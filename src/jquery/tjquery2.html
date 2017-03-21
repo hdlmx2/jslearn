@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+    <title></title>
+    <script type="text/javascript" src="../resource/jquery-3.2.0.min.js"></script>
+
+</head>
+
+<body>
+<p class="demo">jquery Demo</p>
+<p onclick="demo()">dianji</p>
+<table id="tb">
+    <tbody>
+    <tr>
+        <td>第一行</td>
+        <td>第一行</td>
+    </tr>
+    <tr>
+        <td>第二行</td>
+        <td>第二行</td>
+    </tr>
+    <tr>
+        <td>第三行</td>
+        <td>第三行</td>
+    </tr>
+    <tr>
+        <td>第四行</td>
+        <td>第四行</td>
+    </tr>
+    <tr>
+        <td>第五行</td>
+        <td>第五行</td>
+    </tr>
+    </tbody>
+</table>
+<script type="text/javascript">
+    $(".demo").click(function () {
+        alert("aaaa");
+    });
+    function demo() {
+        alert("sss");
+    }
+    var item = document.getElementById("tb")                                                                                                                                                                                                                                                                                                    ;
+    var tbodys = item.getElementsByTagName("tbody")[0];
+    var trs = tbodys.getElementsByName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        if(i%2==0){
+            trs[i].style.backgroundColor="#888"
+        }
+    }
+</script>
+</body>
+</html>
