@@ -5,10 +5,24 @@
     <title>Title</title>
     <script src="../../resource/jquery.min.js"></script>
     <style>
+        .heith {
+            font-weight: bold;
+            color: red;
+        }
 
+        .other {
+            font-style: italic;
+            color: blue;
+        }
     </style>
 </head>
 <body>
+<input type="button" value="输出class">
+<input id="shezhi" type="button" value="设置class">
+<input id="zhuijia" type="button" value="追加class">
+<input type="button" value="删除全部class">
+<input id="qiehuan" type="button" value="重复切换class">
+<input id="panduan" type="button" value="判断class">
 <p class="myclass" title="选择你最喜欢的水果">你最喜欢的水果是？</p>
 <p title="选择你最喜欢的人">你最喜欢的人是？</p>
 <ul>
@@ -52,9 +66,9 @@
     var $para = $("p");
     //    var p_txt = $para.attr("title":"我最爱的水果","name":"test");
     var p_txt = $para.attr("class");
-    $para.attr("class","heith");
+    $para.attr("class", "heith");
     $para.addClass("width");
-    alert(p_txt);
+    //    alert(p_txt);
     //    $para.removeAttr("title");
 
     //    alert(p_txt)
@@ -63,6 +77,15 @@
      var p_txt = this.attr("title");
      alert(p_txt);
      })*/
+    $("#zhuijia").click(function () {
+        $("p").addClass("other");
+    })
+    $("#qiehuan").click(function () {
+        $("p").toggleClass("other");
+    })
+    $("#panduan").click(function () {
+        alert($("p").hasClass("other"));
+    })
 </script>
 
 <table>
