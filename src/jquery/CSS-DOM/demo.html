@@ -6,20 +6,28 @@
     <script src="../../resource/jquery-3.2.0.min.js"></script>
     <script>
         $(function () {
-            var x=10;
-            var y=20;
-             this.mytitle=this.title;
-            $("a.tooltip").mouseover(function (e) {
+            var x = 10;
+            var y = 20;
+            $("a.tooltip").mousemove(function (e) {
+                $("#tooltip").css({
+                    "top": (e.pageY + y) + "px",
+                    "left": (e.pageX + x) + "px"
+                })
+            })
 
-                this.title="";
-                var tooltip = "<div id='tooltip'>" + mytitle + "<\/div>"
+            $("a.tooltip").mouseover(function (e) {
+                this.myTilte = this.title;
+                this.title = "";
+                var tooltip = "<div id='tooltip'>" + this.myTilte + "<\/div>"
                 $("body").append(tooltip);
-                $("#tooltip").css({"top": (e.pageY +y)+ "px", "left": (e.pageX +x) +"px"}).show("fast");
+                $("#tooltip").css({"top": (e.pageY + y) + "px", "left": (e.pageX + x) + "px"}).show("fast");
             }).mouseout(function () {
-                this.title=mytitle;
+                this.title = this.myTilte;
                 $("#tooltip").remove();
+
             })
         })
+
         /* $(function(){
          $("a.tooltip").mouseover(function(e){
          var tooltip = "<div id='tooltip'>"+ this.title +"<\/div>"; //创建 div 元素
