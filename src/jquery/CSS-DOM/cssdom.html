@@ -7,7 +7,7 @@
 </head>
 <body>
 <p class="myclass" title="选择你最喜欢的水果">你最喜欢的水果是？</p>
-<p title="选择你最喜欢的人">你最喜欢的人是？</p>
+<!--<p title="选择你最喜欢的人">你最喜欢的人是？</p>-->
 <ul>
     <li title="苹果">苹果</li>
     <li title="句子">橘子</li>
@@ -21,5 +21,14 @@
     <li title="草莓">草莓</li>
 
 </ul>
+<script>
+    $("p").css("color", "red");
+    $("p").css({fontSize: "30px", backgroundColor: "#888888"});
+    $("p").css("opacity", "0.2");
+    /*var $height = $("p").height("10em");
+    alert($height);*/
+    var offset=$("p").offset();
+    alert(offset);
+</script>
 </body>
 </html>
