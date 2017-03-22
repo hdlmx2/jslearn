@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../resource/jquery-3.2.0.min.js"></script>
+</head>
+<body>
+<input type="text" id="address" value="请输入邮箱地址"/>
+<input type="text" id="password" value="请输入密码"/>
+<input type="button" value="登录"/>
+
+<script>
+    $("#address").focus(function () {
+        var txt_value = $(this).val();
+        if (txt_value == "请输入邮箱地址") {
+            $(this).val("");
+        }
+
+    })
+    $("#address").blur(function () {
+        var txt_value = $(this).val();
+        if (txt_value == "") {
+            $(this).val("请输入邮箱地址");
+        }
+    })
+    $("#password").focus(function () {
+        var txt_value = $(this).val();
+        if (txt_value == "请输入密码") {
+            $(this).val("");
+        }
+
+    })
+    $("#password").blur(function () {
+        var txt_value = $(this).val();
+        if (txt_value == "") {
+            $(this).val("请输入密码");
+        }
+    })
+</script>
+</body>
+</html>

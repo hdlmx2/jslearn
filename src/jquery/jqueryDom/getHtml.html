@@ -3,9 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <title>设置和获HTML、文本和值</title>
-    <script src="../resource/jquery-3.2.0.min.js"></script>
+    <script src="../../resource/jquery.min.js"></script>
+    <style>
+        .heith {
+            font-weight: bold;
+            color: red;
+        }
+
+        .other {
+            font-style: italic;
+            color: blue;
+        }
+    </style>
 </head>
 <body>
+<input type="button" value="输出class">
+<input id="shezhi" type="button" value="设置class">
+<input id="zhuijia" type="button" value="追加class">
+<input type="button" value="删除全部class">
+<input id="qiehuan" type="button" value="重复切换class">
+<input id="panduan" type="button" value="判断class">
+<p class="myclass" title="选择你最喜欢的水果">你最喜欢的水果是？</p>
+<!--<p title="选择你最喜欢的人">你最喜欢的人是？</p>-->
+<ul>
+    <li title="苹果">苹果</li>
+    <li title="句子">橘子</li>
+    <li title="菠萝">菠萝</li>
 
+</ul>
+<br>
+<ul>
+    <li title="火龙果">火龙果</li>
+    <li title="芒果">芒果</li>
+    <li title="草莓">草莓</li>
+
+</ul>
+<script>
+    /*var li = $("ul li:eq(1)");
+     var li_txt = li.text();
+     alert(li_txt);*/
+    var $one_li = $("ul li:eq(1)");
+    var $two_li = $("ul li:eq(2)");
+    /*  $two_li.insertBefore($one_li);
+     var $li=$("ul li:eq(1)").remove();
+     $li.appendTo("ul");*/
+    //    $("ul li:eq(1)").appendTo("ul");
+    ////    $("ul li").remove("li[title!=菠萝]");
+    //    $("ul li").click(function () {
+    //        alert($(this).html())
+    //    })
+    //    var $li=$("ul li:eq(1)").detach();
+    //    $li.appendTo("ul");
+    /* $("ul li:eq(1)").empty();*/
+    $("ul li").click(function () {
+        $(this).clone(true).appendTo("ul");
+    })
+    //    $("p").replaceWith("<strong>你最不喜欢吃的苹果</strong>")
+    //    $("p").click(function () {
+    //        this.replaceWith("<strong>你最不喜欢吃的苹果</strong>")
+    //    })
+    //    $("strong").wrapInner("<br></br>");
+    var $para = $("p");
+    //    var p_txt = $para.attr("title":"我最爱的水果","name":"test");
+    var p_txt = $para.attr("class");
+    $para.attr("class", "heith");
+    $para.addClass("width");
+    //    alert(p_txt);
+    //    $para.removeAttr("title");
+
+    //    alert(p_txt)
+    //    alert(p_txt);
+    /*    $("p").click(function () {
+     var p_txt = this.attr("title");
+     alert(p_txt);
+     })*/
+    $("#zhuijia").click(function () {
+        $("p").addClass("other");
+    })
+    $("#qiehuan").click(function () {
+        $("p").toggleClass("other");
+    })
+    $("#panduan").click(function () {
+        alert($("p").hasClass("other"));
+    })
+    /* var p_html = $("p").html();
+     alert(p_html);*/
+    var p_html = $("p").text();
+    alert(p_html);
+</script>
+
+<table>
+    <tr title=""></tr>
+</table>
 </body>
 </html>
