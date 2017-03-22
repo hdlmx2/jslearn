@@ -55,9 +55,9 @@
     //    var $li=$("ul li:eq(1)").detach();
     //    $li.appendTo("ul");
     /* $("ul li:eq(1)").empty();*/
-    $("ul li").click(function () {
-        $(this).clone(true).appendTo("ul");
-    })
+/*    $("ul li").click(function () {
+     $(this).clone(true).appendTo("ul");
+     })*/
     //    $("p").replaceWith("<strong>你最不喜欢吃的苹果</strong>")
     //    $("p").click(function () {
     //        this.replaceWith("<strong>你最不喜欢吃的苹果</strong>")
@@ -85,6 +85,18 @@
     })
     $("#panduan").click(function () {
         alert($("p").hasClass("other"));
+    })
+    var $body=$("body").children();
+    var $p=$("p").children();
+    var $ul=$("ul").children();
+    alert($body.length);
+    alert($p.length);
+    alert($ul.length);
+    for(var i=0,len=$ul.length;i<len;i++){
+        alert($ul[i].innerHTML);
+    }
+    $(document).bind("click",function (e) {
+        $(e.target).closest("li").css("color","red");
     })
 </script>
 
