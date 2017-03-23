@@ -49,7 +49,7 @@
                 this.myTilte = this.title;
                 this.title = "";
                 var imgTitle = this.myTilte ? "<br/>" + this.myTilte : "";
-                var tooltip = "<div id='tooltip'><img src='" + this.href + "' alt='产品预览'/>"+imgTitle+"</div>";
+                var tooltip = "<div id='tooltip'><img src='" + this.href + "' alt='产品预览'/>" + imgTitle + "</div>";
                 $("body").append(tooltip);
                 $("#tooltip").css({
                     "top": (e.pageY + y) + "px",
@@ -59,8 +59,8 @@
             }).mouseout(function () {
                 this.title = this.myTilte;
                 $("#tooltip").remove();
-            }).mouseove(function (e) {
-                $("#tootip").css({
+            }).mousemove(function (e) {
+                $("#tooltip").css({
                     "top": (e.pageY + y) + "px",
                     "left": (e.pageX + x) + "px"
                 })
