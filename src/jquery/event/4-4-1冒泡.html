@@ -52,18 +52,35 @@
                 event.stopPropagation();
 
             })
-           /* $("body").click(function () {
+            $("body").click(function () {
                 var $txt = $("#msg").html() + "<p>body元素被点击</p>";
                 $("#msg").html($txt);
-            })*/
+            })
         })
         $(function () {
             $("#sub").click(function () {
-                var username=$("#username").val();
-                if(username==""){
+                var username = $("#username").val();
+                if (username == "") {
                     $("#msg").html("<p>文本框中的值不能为空</p>")
-                    event.preventDefault();
+//                    event.preventDefault();
+                    return false;
                 }
+            })
+        })
+       /* $(function () {
+            $("a").click(function (event) {
+                alert("当前鼠标位置：X："+event.pageX+",Y:"+event.pageY);
+                return false;
+            })
+        })*/
+        $(function () {
+            $("a").mousedown(function (e) {
+                alert(e.which);
+                return false;
+            })
+            $("input").keyup(function (e) {
+                alert(e.which);
+                return false;
             })
         })
 
@@ -82,5 +99,6 @@
 <div id="msg">
 
 </div>
+<a href="www.google.com">点击跳转</a>
 </body>
 </html>
