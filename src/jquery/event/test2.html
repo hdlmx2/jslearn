@@ -53,10 +53,17 @@
                 var $content = $(this).next();
                 if ($content.is(":visible")) {
                     $(this).removeClass("highlight");
-                    $content.hide();
+//                    $content.hide(500);
+//                    $content.fadeOut(500);
+//                    $(".content").css("display","none");
+                    $(".content").slideUp(1000);
                 } else {
                     $(this).addClass("highlight");
-                    $content.show();
+//                    $content.show(500);
+//                    $content.fadeIn(500);
+//                    $(".content").css("display","block");
+
+                    $(".content").slideDown(1000);
                 }
             })
         })
