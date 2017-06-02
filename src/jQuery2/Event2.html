@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--
+    <script src="http://how2j.cn/study/jquery.min.js"></script>
+-->
+    <script src="../resource/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#message1").html("页面加载成功");
+
+        });
+        $(function(){
+            $("#img").load(function(){
+                $("#message2").html("图片加载成功");
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+<div id="message1"></div>
+<div id="message2"></div>
+
+<img id="img" src="http://how2j.cn/example.gif">
+</body>
+</html>

@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>JQuery事件</title>
+    <script src="../resource/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#message1").html("页面加载成功！")
+        });
+        $(function () {
+            $("#img").load(function () {
+                $("#message2").html("图片加载成功！");
+            })
+        });
+        $(function () {
+
+            $("#b").dblclick(function () {
+                $("#message").html("双击事件");
+            })
+            $("#b").click(function () {
+                $("#message").html("单击事件");
+            });
+        })
+    </script>
 </head>
 <body>
+<div id="message1"></div>
+<div id="message2"></div>
 
+<img id="img" src="../images/example.gif">
+<div id="message"></div>
+
+<button id="b">测试单击和双击</button>
 </body>
 </html>
